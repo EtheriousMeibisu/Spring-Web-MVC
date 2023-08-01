@@ -11,7 +11,7 @@ public class ApplicationInitializer implements WebApplicationInitializer {
     @Override
     public void onStartup(ServletContext servletContext){
         final var context = new AnnotationConfigWebApplicationContext();
-        context.scan("java/netology");
+        context.scan("netology");
         context.refresh();
 
         final var servlet = new DispatcherServlet(context);
